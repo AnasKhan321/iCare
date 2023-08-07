@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    <nav class="nav background">
+        
+        <div class="logo">iCare</div>
+
+        <ul class="list">
+            
+            <li class="l-item">  <a href="">Home</a> </li>
+            <li class="l-item">  <a href="about">About</a> </li>
+            <li class="l-item">  <a href="appointment">Book A Appointment </a> </li>
+        </ul>
+
+         <div class="navigate">
+            {% if request.user.is_authenticated %}
+                <a href="#">@{{request.user.username}}</a>
+                <a href="getappointment">Your Appointments</a>
+                <a href="logout">Logout</a>
+            {% else %}
+            <a href="login">Login</a>
+            <a href="signup">Signup</a>
+            {% endif %}
+         </div>
+
+    </nav>
+    <hr>
+    <div class="text-align message">
+            {% for message in messages %}
+            {{message}}
+
+            {% endfor %}
+    </div>
+    <div class="home">
+        <div class="con">
+
+     <h2 style="
+    text-align: center;
+">Healing Lives, Restoring Hope: Where Care Meets Compassion : iCare</h2>
+        <p class="article">In the pursuit of healing and caring for our patients, hospitals also have a significant responsibility to protect and preserve the environment. As guardians of health, it is essential for healthcare facilities to adopt sustainable practices that not only contribute to a greener planet but also create a healthier and safer environment for patients, staff, and the community. In this blog, we will explore the initiatives and efforts undertaken by our hospital to foster an eco-friendly environment and our commitment to sustainability.Climate change is a global concern, and hospitals, being energy-intensive establishments, can contribute to carbon emissions. To combat this, our hospital has implemented energy-efficient measures such as LED lighting, energy-saving appliances, and smart HVAC systems. By reducing our carbon footprint, we not only cut down on greenhouse gas emissions but also set an example for others to follow.Proper waste management is crucial in a healthcare setting. Our hospital has instituted comprehensive recycling programs, segregating and recycling paper, plastic, glass, and other materials to minimize waste sent to landfills. Additionally, we follow stringent guidelines for the safe disposal of medical waste, ensuring it does not harm the environment or public health.
+
+Green Spaces and Healing Gardens:
+Incorporating green spaces within the hospital's premises has proven to have a positive impact on patients' well-being and recovery. Healing gardens, rooftop greenery, and indoor plants not only improve air quality but also promote a sense of calm and relaxation for patients and staff alike. These natural oases contribute to reducing stress levels and speeding up the healing process.
+
+Promoting Sustainable Transportation:
+Encouraging sustainable transportation options for employees and visitors is a priority for our hospital. We provide bicycle racks and electric vehicle charging stations to promote eco-friendly commuting. Additionally, initiatives such as carpooling programs and public transportation incentives are part of our commitment to reduce vehicular emissions.</p>
+    <button class="demo"> <a href="/appointment"  style="
+    text-decoration: none;
+    color: wheat;
+">Book a Free CheckUp</a>   </button>
+</div>
+
+
+<div>
+    
+    <img src="{%static 'img/12.png' %}" style="
+    width: 270px;
+    margin: 23px 0px;"
+>
+</div>
+        
+
+    </div>
+
+
+    <div class="Doctors">
+            <h3 class="text-align">Top Doctors Around the Country</h3>
+            <div class="cards d-flex">
+                
+                <div class="card">
+                       <img src="{%static 'img/1.jpg' %}" style="
+    width: 100%;
+    margin: 10px 0px;
+
+        border-radius: 20px;
+    "
+>
+                <h4 class="name">Dr. Aditya Birla  MBBS </h4>
+
+
+                <p>Completing an MBBS from a top university is undoubtedly a remarkable achievement that opens doors to a world of possibilities for doctors. However, it is the transformation from a student of medicine to a compassionate healer in the real world that defines their legacy. The doctor's journey is one of continuous learning, embracing diversity, and navigating through challenges with unwavering determination. With their top-tier education as a strong foundation, these doctors go on to make a profound impact on the lives of their patients, touching hearts, and healing lives with their unique blend of expertise and empathy. Their story is an inspiration for aspiring doctors everywhere, showing that while a top university education is a milestone, it is only the beginning of a lifelong commitment to the noble profession of medicine.</p>
+
+
+                <b>Topper of Chapra University </b>
+
+                </div>
+                        <div class="card">
+                       <img src="{%static 'img/2.jpg' %}" style="
+    width: 100%;
+    margin: 10px 0px;
+    border-radius: 20px;
+    "
+>
+
+                <h4 class="name">Dr. Shubham  Choudhary   Eye Specialist  </h4>
+
+
+                <p>Completing an MBBS from a top university is undoubtedly a remarkable achievement that opens doors to a world of possibilities for doctors. However, it is the transformation from a student of medicine to a compassionate healer in the real world that defines their legacy. The doctor's journey is one of continuous learning, embracing diversity, and navigating through challenges with unwavering determination. With their top-tier education as a strong foundation, these doctors go on to make a profound impact on the lives of their patients, touching hearts, and healing lives with their unique blend of expertise and empathy. Their story is an inspiration for aspiring doctors everywhere, showing that while a top university education is a milestone, it is only the beginning of a lifelong commitment to the noble profession of medicine.</p>
+
+
+                <b> Graduted From Darbannga Instituion  </b>
+
+                </div>
+                   <div class="card">
+                       <img src="{%static 'img/3.jpg' %}" style="
+    width: 100%;
+    margin: 10px 0px;
+    border-radius: 20px;
+    "
+>
+
+                <h4 class="name"> Dr. Priti Jain  Psycratist  </h4>
+
+
+                <p>Completing an MBBS from a top university is undoubtedly a remarkable achievement that opens doors to a world of possibilities for doctors. However, it is the transformation from a student of medicine to a compassionate healer in the real world that defines their legacy. The doctor's journey is one of continuous learning, embracing diversity, and navigating through challenges with unwavering determination. With their top-tier education as a strong foundation, these doctors go on to make a profound impact on the lives of their patients, touching hearts, and healing lives with their unique blend of expertise and empathy. Their story is an inspiration for aspiring doctors everywhere, showing that while a top university education is a milestone, it is only the beginning of a lifelong commitment to the noble profession of medicine.</p>
+
+
+                <b>MBBS  In Psychology </b>
+
+                </div>
+
+
+            </div>
+
+    </div>
+
+    <footer
+
+    >
+        
+
+        <p>&copy; Copyright WWW.iCare.Com <b>For More Information Call Us : +91 9867123456 </b></p>
+    </footer>
+
+
+<script type="text/javascript">
+    let ele = document.getElementsByClassName('message')[0]
+    setTimeout(()=>{ele.style.display = 'none'},3000)
+
+</script>
+
+</body>
+</html>

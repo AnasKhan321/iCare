@@ -1,0 +1,36 @@
+{%   extends 'base.html' %}
+{% block body   %}
+
+
+<div>
+
+    <form class="appointment-form" action="/signup" method="post">
+                {% csrf_token %}
+
+            <label for="name">Enter Your UserName</label>
+            <input id="name" name="username" type="text">
+           <label for="fname">Enter Your First Name   </label>
+             <input id="fname" name="fname" type="text" >
+          <label for="lname">Enter Your Last Name   </label>
+                <input id="lname" name="lname" type="text" >
+            <label for="email">Enter Your Email </label>
+            <input id="email" type="email" name="email" >
+              <label for="pass1">Enter Your Password </label>
+            <input id="pass1" type="password"  name="pass1" minlength="8" maxlength="16">
+            <label for="pass2">Confirm Password </label>
+            <input id="pass2" type="password" name="pass2" minlength="8" maxlength="16">
+
+       <button type="submit" style="
+    width: 6%;
+    padding: 8px;
+    margin-top: 12px;
+    color: #fffde5;
+    background-color: green;
+    border: 2px solid white;
+">SignUp</button>
+    </form>
+
+</div>
+
+
+{% endblock %}

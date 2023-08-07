@@ -1,0 +1,127 @@
+{%   extends 'base.html' %}
+
+
+
+{% block body %}
+    
+    <div class="about d-flex">
+         <div class="con">
+
+                        <h3>Welcome To iCare </h3>
+                        <p>Welcome to [Hospital Name], where our commitment to delivering exceptional healthcare services goes hand in hand with our dedication to embracing innovation. In today's fast-paced world, technological advancements have revolutionized the healthcare landscape, enabling us to provide better patient outcomes, enhanced experiences, and cutting-edge treatments. In this blog, we will explore the various ways in which [Hospital Name] is at the forefront of innovation, ensuring that our patients receive world-class care and stay ahead of the curve in the healthcare industry.
+
+            State-of-the-Art Facilities
+            At [Hospital Name], we understand that modern healthcare requires state-of-the-art facilities and cutting-edge medical equipment. That's why we have made significant investments to ensure that our infrastructure remains at the forefront of medical innovation. From advanced diagnostic imaging systems to robotic-assisted surgical technology, our facilities empower our skilled medical professionals to make accurate diagnoses and perform minimally invasive procedures, reducing patient recovery times and enhancing overall outcomes.
+
+            Telemedicine: Breaking Barriers in Healthcare
+            Recognizing the need to make healthcare more accessible and convenient, [Hospital Name] has fully embraced telemedicine. Through secure video consultations, patients can connect with our experienced doctors and specialists from the comfort of their homes. Telemedicine not only saves valuable time but also expands our reach to remote areas, ensuring that quality healthcare reaches even the most underserved communities.
+
+            AI-Driven Healthcare
+            Artificial Intelligence (AI) has emerged as a game-changer in the healthcare industry, and we have fully integrated AI-driven solutions at [Hospital Name]. From AI-powered diagnostics that analyze medical images with unmatched precision to predictive analytics that help identify high-risk patients, AI technology allows us to make informed decisions and provide personalized treatment plans, improving patient outcomes and optimizing healthcare workflows.</p>
+             </div>
+            {% load static %}
+            <img src="{% static 'img/hospital.jpg' %}" style="
+    width: 450px;
+    opacity: 0.6;
+    margin-top: 49px;
+    border-radius: 39px;
+    margin-left: 20px;
+">
+    </div>
+
+
+
+   <div class="a">
+       
+
+       <h2 class="text-align">iCare  Since 1998</h2>
+       <img src="{% static 'img/hospital.jpg' %}" style="
+    width: 700px;
+    opacity: 1;
+    margin-top: 49px;
+    border-radius: 39px;
+    margin-left: 20px;
+    text-align: center;
+     display: block;
+  margin: 0 auto;
+">
+   </div>
+
+     <div class="cards d-flex">
+
+
+
+               <div class="card">
+                       <img src="{%static 'img/tec.jpg' %}" style="
+    width: 100%;
+    margin: 10px 0px;
+
+        border-radius: 20px;
+    "
+>
+                <h4 class="name">Best In TechNology  </h4>
+
+
+                <p>Artificial Intelligence (AI) has emerged as a game-changer in the healthcare industry, and we have fully integrated AI-driven solutions at [Hospital Name]. From AI-powered diagnostics that analyze medical images with unmatched precision to predictive analytics that help identify high-risk patients, AI technology allows us to make informed decisions and provide personalized treatment plans, improving patient outcomes and optimizing healthcare workflows.</p>
+
+
+                <b>AI-Driven Healthcare</b>
+
+                </div>
+
+
+                 <div class="card">
+                       <img src="{%static 'img/env.jpg' %}" style="
+    width: 100%;
+    margin: 10px 0px;
+
+        border-radius: 20px;
+    "
+>
+                <h4 class="name">Cool Environment   </h4>
+
+
+                <p>One of the key driving forces behind our success in healthcare innovation is the culture we foster at [Hospital Name]. We encourage our medical professionals to think outside the box, explore new ideas, and collaborate across disciplines. Our hospital actively engages in research and partnerships with leading academic institutions and medical organizations, staying at the forefront of medical breakthroughs and bringing the latest innovations directly to our patients.</p>
+
+
+                <b>Fostering a Culture of Innovation</b>
+
+                </div>
+  <div class="card">
+                       <img src="{%static 'img/ach.jpg' %}" style="
+    width: 100%;
+    margin: 10px 0px;
+
+        border-radius: 20px;
+    "
+>
+                <h4 class="name">Achieve a Lot of   </h4>
+
+
+                <p>At [Hospital Name], we understand that each patient is unique, and so should be their treatment plan. Through the use of advanced genetic testing and molecular profiling, we practice personalized medicine, customizing treatments based on a patient's specific genetic makeup, lifestyle, and medical history. This approach not only enhances the efficacy of treatments but also reduces the likelihood of adverse reactions, ultimately leading to better patient experiences and outcomes.</b>
+
+                </div>
+
+
+        </div>
+        <h2 class="text-align">Contact Us</h2>
+
+        <form class="contact" action="/contact" method="POST">
+                {% csrf_token %}
+
+            <label for="fname">Enter Your  Name </label>
+            <input type="text" name="name" id="fname">
+            <label for="email">Enter Your Email Address </label>
+            <input type="email" name="email" id="email">
+            <label for="number">Enter Your Contact Number </label>
+            <input type="tel" name="number" id="number">
+            <label for="Concern">Enter Your Concern </label>
+            <textarea id="Concern" rows="8" name="concern"> </textarea>
+            <button  class="contact-s" type="submit">Submit </button>
+            
+
+
+        </form>
+
+
+{% endblock %}

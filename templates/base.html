@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>{%  block title %}   {% endblock %}</title>
+</head>
+<body>
+
+    <nav class="nav background">
+
+        <div class="logo">iCare</div>
+
+        <ul class="list">
+
+            <li class="l-item">  <a href="/">Home</a> </li>
+            <li class="l-item">  <a href="about">About</a> </li>
+            <li class="l-item">  <a href="appointment">Book A Appointment </a> </li>
+        </ul>
+
+        <div class="navigate">
+            {% if request.user.is_authenticated %}
+                <a href="#">@{{request.user.username}}</a>
+                            <a href="getappointment">Your Appointments</a>
+
+                <a href="logout">Logout</a>
+            {% else %}
+            <a href="login">Login</a>
+            <a href="signup">Signup</a>
+            {% endif %}
+         </div>
+
+    </nav>
+    <hr>
+
+{% block body %}  {% endblock  %}
+
+
+
+  <footer
+
+    >
+
+
+        <p>&copy; Copyright WWW.iCare.Com <b>For More Information Call Us : +91 9867123456 </b></p>
+    </footer>
+
+</body>
+</html>

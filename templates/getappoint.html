@@ -1,0 +1,36 @@
+{%   extends 'base.html' %}
+{% block body   %}
+
+
+<div class="all">
+    {% if length == 0 %}
+
+        <h2 class="text-align">You does not have appointment </h2>
+    <div class="d-flex" style="
+    justify-content: center;
+"><a href="appointment"  style="
+    text-decoration: none;
+    color: #0f333c;
+">Book an Appointment</a></div>
+
+    {% else %}
+    {% for appointment in appointments %}
+        <div class="appointments">
+
+            <h3>{{appointment.Name}} </h3>
+            <p>{{appointment.Date}}</p>
+            <p>{{appointment.Checkup}}</p>
+            <p>{{appointment.Updat}}</p>
+
+      <a href="/delete/{{appointment.id}}"  style="
+    color: #0e5c24;
+    text-decoration: none;
+    text-align: left;
+">Cancel Appointment </a>
+        </div>
+    {% endfor %}
+    {% endif %}
+
+</div>
+
+{% endblock %}

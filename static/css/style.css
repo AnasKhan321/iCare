@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Kalam:wght@300&family=Lora&family=Manrope:wght@300&family=Mukta:wght@300&family=Noto+Serif&family=Poppins:wght@300&family=Potta+One&family=Roboto+Condensed&family=Roboto:wght@300;400&family=Tangerine:wght@700&family=Tilt+Prism&display=swap');
+/*font-family: 'Dancing Script', cursive;
+font-family: 'Kalam', cursive;
+font-family: 'Lora', serif;
+font-family: 'Manrope', sans-serif;
+font-family: 'Mukta', sans-serif;
+font-family: 'Noto Serif', serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Potta One', cursive;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Tangerine', cursive;
+font-family: 'Tilt Prism', cursive;*/
+
+
+*{
+  font-family: 'Roboto', sans-serif;
+
+
+}
+.demo{
+ padding: 14px;
+
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    background-color: green;
+    color: white;
+    border: 2px solid white;
+    margin-left: 25px;
+
+
+}
+.demo:hover{
+
+  background-color: transparent;
+  color: black;
+  border: 2px solid black;
+}
+.demo a:hover{
+  color: black;
+
+}
+.nav{
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+}
+
+.logo{
+
+      font-size: 25px;
+    margin-left: 30px;
+    padding: 0px 10px;
+    margin-top: 6px;
+    cursor: pointer;
+}
+
+.navigate{
+  margin: 13px 0px;
+}
+
+
+.navigate a {
+      padding: 0px 19px;
+    text-decoration: none;
+    color: black;
+}
+.navigate a:hover{
+  color: grey;
+}
+.list{
+
+  display: flex;
+}
+
+.d-flex{
+  display: flex;
+}
+
+.l-item{
+  list-style: none;
+  padding: 0px 10px;
+}
+
+.l-item a{
+  color: black;
+  text-decoration: none;
+}
+
+.l-item a:hover{
+  color: grey;
+}
+
+.background-img img{
+}
+.img{
+  width: 100%;
+  
+
+}
+
+
+
+.home{
+  display: flex;
+
+  background:url("static/img/back.jpg") ;
+  background-color: #bfe2bf42; 
+      word-spacing: 5px;
+    line-height: 30px;
+    margin-top: 25px;
+
+}
+
+
+.article{
+  padding: 0px 30px;
+}
+.text-align{
+  text-align: center;
+}
+
+.cards{
+  justify-content: center;
+}
+
+.card{
+  width: 25%;
+      border: 2px solid #e9e2e2;
+    padding: 15px;
+    border-radius: 20px;
+    margin: 0px 20px;
+  background-color: #bfe2bf42; 
+  cursor: pointer;
+
+}
+
+
+.card:hover{
+  background-color: #9eef9e42; 
+
+}
+
+footer{
+      text-align: center;
+    margin-top: 25px;
+    border: 2px solid whitesmoke;
+    padding: 10px;
+}
+
+.about{
+      background-color: #4c801f1a;
+    padding: 20px 5px;
+    margin-top: 30px;
+}
+
+.con{
+      margin-left: 35px;
+    word-spacing: 9px;
+    line-height: 26px;
+}
+
+.a{
+      margin-top: 20px;
+    margin-bottom: 60px;
+}
+.contact{
+  display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 1100px;
+    justify-content: center;
+}
+
+.contact input{
+     padding: 10px;
+    border: 2px solid #beb5b5;
+    border-radius: 4px;
+    margin: 10px 0px;
+}
+.contact-s{
+      width: 100px;
+    padding: 10px 20px;
+    background-color: #04ad04;
+    color: white;
+    font-size: 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.contact-s:hover{
+  color: white;
+  background-color: blue;
+}
+.appointment-form{
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left : 450px ;
+
+}
+
+.appointment-form input{
+    margin-top: 12px;
+    width: 61%;
+    padding: 2px;
+
+}
+
+.appointment-form label{
+  margin-top: 10px;
+}
+
+.message{
+  color: red;
+}
+
+.appointments{
+      border: 2px solid silver;
+    border-radius: 20px;
+    padding: 10px 30px;
+        display: block;
+    width: 600px;
+    margin: auto;
+}

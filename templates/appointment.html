@@ -1,0 +1,78 @@
+{%   extends 'base.html' %}
+{% block body   %}
+
+
+
+<h2 class="text-align">Book A Appointment</h2>
+
+<div>
+
+    <form class="appointment-form" method="POST" action="/appointment">
+                            {% csrf_token %}
+
+            <label for="name">Enter Name of Patient </label>
+            <input id="name" name="name" type="text">
+        <label for="email">Enter Your Email Address  </label>
+            <input id="email" name="email" type="email">
+        <label for="tel">Enter Phone No.  </label>
+            <input id="tel" name="tel" type="tel">
+        <label for="checkup" style="
+    margin-top: 10px;
+">Choose Your CheckUp :</label>
+
+            <select name="checkup" id="checkup" style="
+    padding: 5px 0px;
+    width: 62%;
+    margin-top: 7px;
+">
+              <option value="Free">Free Check Up </option>
+              <option value="Eye">Eye Check Up</option>
+              <option value="Head">Head Injury</option>
+              <option value="Stomach">Stomach Pain </option>
+            </select>
+
+<label for="start"  style="
+    margin-top: 15px;
+">Enter CheckUp Date </label>
+
+<input type="date" id="start" name="Date"
+       value="2018-07-22"
+       min="2018-01-01" max="2023-12-31">
+
+
+
+       <button type="submit" style="
+    width: 6%;
+    padding: 8px;
+    margin-top: 12px;
+    color: #fffde5;
+    background-color: green;
+    border: 2px solid white;
+">BooK</button>
+    </form>
+
+</div>
+
+
+<script type="text/javascript">
+    var today = new Date();
+    console.log(1+(today.getMonth()+1))
+    if (today.getMonth()+1 < 10) {
+
+         var date = today.getFullYear()+'-'+ '0' + (today.getMonth()+1)+'-'+today.getDate();
+
+    }
+    else{
+         var date = today.getFullYear()+'-'+  (today.getMonth()+1)+'-'+today.getDate();
+
+    }
+    console.log(date)
+    var element = document.getElementById("start");
+    element.setAttribute("min", date);
+    element.setAttribute("value", date);
+
+
+
+</script>
+
+{% endblock %}
